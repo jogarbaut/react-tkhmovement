@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import AboutPage from "./pages/AboutPage"
+import ClinicInformationPage from "./pages/ClinicInformationPage"
+import Footer from "./components/Footer"
+import Navbar from "./components/Navbar"
+import SchedulerPage from "./pages/SchedulerPage"
+import TestimonialsPage from "./pages/TestimonialsPage"
+import VideosPage from "./pages/VideosPage"
+import { useState } from "react"
 
-function App() {
+const App = () => {
+  const [selectedPage, setSelectedPage] = useState('home')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full">
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+      <div className="max-w-5xl mx-auto">
+        <AboutPage setSelectedPage={setSelectedPage} />
+        <ClinicInformationPage setSelectedPage={setSelectedPage} />
+        <SchedulerPage setSelectedPage={setSelectedPage} />
+        {/* <VideosPage /> */}
+        <TestimonialsPage setSelectedPage={setSelectedPage} />
+      </div>
+      <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
