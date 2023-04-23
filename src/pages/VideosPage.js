@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const VideosPage = ({ setSelectedPage }) => {
   return (
-    <section id="videos">
+    <section id="videos" className="w-full">
       <motion.div onViewportEnter={() => setSelectedPage("videos")}>
         <SectionTitle>Videos</SectionTitle>
       </motion.div>

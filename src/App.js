@@ -6,6 +6,7 @@ import SchedulerPage from "./pages/SchedulerPage"
 import TestimonialsPage from "./pages/TestimonialsPage"
 import VideosPage from "./pages/VideosPage"
 import { useState } from "react"
+import HomePage from "./pages/HomePage"
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState('home')
@@ -13,7 +14,8 @@ const App = () => {
   return (
     <div className="w-full">
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
-      <div className="max-w-5xl mx-auto">
+      <HomePage setSelectedPage={setSelectedPage} />
+      <div className="w-full max-w-5xl mx-auto">
         <AboutPage setSelectedPage={setSelectedPage} />
         <ClinicInformationPage setSelectedPage={setSelectedPage} />
         <SchedulerPage setSelectedPage={setSelectedPage} />

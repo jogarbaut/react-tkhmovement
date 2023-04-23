@@ -18,20 +18,20 @@ const Slider = ({ data }) => {
   }
 
   return (
-    <div className="w-full h-full rounded-xl bg-center bg-cover relative group">
+    <div className="w-full h-full rounded-xl bg-center bg-cover relative">
       <div
-        className="hidden group-hover:block absolute top-1/2 text-2xl left-0 rounded-full p-2 bg-black/20 text-white cursor-pointer"
+        className="absolute top-1/2 text-2xl left-4 rounded p-2 bg-primary-500/50 hover:bg-primary-500 text-white cursor-pointer hover:duration-300 duartion-300"
         onClick={handlePreviousArrowClick}
       >
         <GoChevronLeft />
       </div>
       <div
-        className="hidden group-hover:block absolute top-1/2 right-0 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer"
+        className="absolute top-1/2 right-4 text-2xl rounded p-2 bg-primary-500/50 hover:bg-primary-500 text-white cursor-pointer hover:duration-300 duration-300"
         onClick={handleNextArrowClick}
       >
         <GoChevronRight />
       </div>
-      <div className="h-48 border border-red-500 w-3/4 mx-auto duration-500 ease-in-out">
+      <div className="h-1/2 max-h-96 w-full mx-auto transition duration-500 px-16 md:px-32 m-16 overflow-y-auto">
         <Slide data={data[currentIndex]} />
         {/* {slides[currentIndex].testimonial} */}
       </div>

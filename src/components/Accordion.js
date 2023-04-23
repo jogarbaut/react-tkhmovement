@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { GoChevronDown, GoChevronLeft } from "react-icons/go"
+import Button from "./Button"
 
 const Accordion = ({ items }) => {
   const [expandedIndex, setExpandedIndex] = useState(-1)
@@ -10,6 +11,10 @@ const Accordion = ({ items }) => {
     } else {
       setExpandedIndex(newIndex)
     }
+  }
+
+  const handleScheduleClick = (link) => {
+    window.location.href = link
   }
 
   const renderedItems = items.map((item, index) => {
@@ -30,7 +35,11 @@ const Accordion = ({ items }) => {
           {item.title}
           {icon}
         </div>
-        {isExpanded && <div className="border-b p-5">{item.description}</div>}
+        {isExpanded && (
+        <div className="border-b p-5">
+          {item.description}
+          <Button primary onClick={() => handleScheduleClick(item.link)}>Schedule</Button>
+        </div>)}
       </div>
     )
   })

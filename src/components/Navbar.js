@@ -3,11 +3,13 @@ import useMediaQuery from "../hooks/useMediaQuery"
 import logo from "../assets/logo.png"
 import { GoThreeBars, GoX } from "react-icons/go"
 import NavLink from "./NavLink"
+import NavButton from "./NavButton"
+import { FaInstagram, FaYelp, FaGoogle } from "react-icons/fa"
 
 const Navbar = ({ selectedPage, setSelectedPage }) => {
   const [isUserTopOfPage, setIsUserTopOfPage] = useState(false)
 
-  const isSmallScreenAndAbove = useMediaQuery("(min-width:768px)")
+  const isLargeScreenAndAbove = useMediaQuery("(min-width:1025px)")
 
   const navbarBackground = isUserTopOfPage
     ? ""
@@ -30,7 +32,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
 
   const renderedFullNavbar = (
     <>
-      <div className="flex items-center justify-between gap-8 text-sm">
+      <div className="flex items-center justify-between gap-4 text-sm">
         <NavLink
           to="home"
           selectedPage={selectedPage}
@@ -74,10 +76,16 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
           Testimonials
         </NavLink>
       </div>
-      <div className="flex items-center justify-between gap-8">
-        <p>IG</p>
-        <p>YP</p>
-        <p>YP</p>
+      <div className="flex items-center justify-between gap-4">
+        <NavButton to={'https://www.instagram.com/dr.takhuynh.dc/'}>
+          <FaInstagram />
+        </NavButton>
+        <NavButton to={'https://www.yelp.com/biz/south-bay-rehab-and-performance-cupertino-5'}>
+          <FaYelp />
+        </NavButton>
+        <NavButton to={'https://www.google.com/search?hl=en-US&gl=us&q=South+Bay+Rehab+and+Performance,+21629+Stevens+Creek+Blvd,+Cupertino,+CA+95014&ludocid=2591568071588085950&lsig=AB86z5V4qEBt6z_a03fT7OKh5Ryw#lrd=0x808fb58e41eadc7b:0x23f7196e2e4080be,1'}>
+          <FaGoogle />
+        </NavButton>
       </div>
     </>
   )
@@ -109,9 +117,15 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
         <NavLink to="videos">Videos</NavLink>
         <NavLink to="testimonials">Testimonials</NavLink>
         <div className="flex gap-4 justify-start">
-          <p>IG</p>
-          <p>YP</p>
-          <p>YP</p>
+          <NavButton>
+            <FaInstagram />
+          </NavButton>
+          <NavButton>
+            <FaYelp />
+          </NavButton>
+          <NavButton>
+            <FaGoogle />
+          </NavButton>
         </div>
       </div>
     </div>
@@ -130,10 +144,10 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
               className="w-full h-auto object-contain"
             />
           </div>
-          {isSmallScreenAndAbove ? renderedFullNavbar : renderedMinimizedNavbar}
+          {isLargeScreenAndAbove ? renderedFullNavbar : renderedMinimizedNavbar}
         </div>
       </div>
-      {!isSmallScreenAndAbove && isMenuToggled && renderedNavbarModal}
+      {!isLargeScreenAndAbove && isMenuToggled && renderedNavbarModal}
     </nav>
   )
 }

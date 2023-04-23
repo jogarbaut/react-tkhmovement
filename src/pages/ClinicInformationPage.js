@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const ClinicInformationPage = ({ setSelectedPage }) => {
   return (
-    <section id="clinic">
+    <section id="clinic" className="w-full">
       <motion.div onViewportEnter={() => setSelectedPage("clinic")}>
         <SectionTitle>Clinic Information</SectionTitle>
       </motion.div>

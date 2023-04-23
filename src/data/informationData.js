@@ -5,7 +5,7 @@ const informationData = [
     subtitle: "Address",
     description_1: "21629 Stevens Creek Boulevard",
     description_2: "Cupertino, CA 95014 USA",
-    icon: "time-outline.svg"
+    icon: "GoLocation"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const informationData = [
     subtitle: "Business Hours",
     description_1: "Any Day, 9am-6pm",
     description_2: "Appointment Only",
-    icon: "location-outline.svg"
+    icon: "GoClock"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const informationData = [
     subtitle: "Phone & Email",
     description_1: "+1 (650) 564-3538",
     description_2: "takhuynhmovement@gmail.com",
-    icon: "phone-portrait-outline.svg"
+    icon: "GoDeviceMobile"
   }
 ]
 

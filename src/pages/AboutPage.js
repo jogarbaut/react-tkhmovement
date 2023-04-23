@@ -13,17 +13,17 @@ const AboutPage = ({setSelectedPage}) => {
   const data = [educationData, experienceData, certificationData]
 
   return (
-    <section id="about">
+    <section id="about" className="w-full">
       <motion.div onViewportEnter={() => setSelectedPage('about')}>
         <SectionTitle>About Dr. Takashi Kumagai Huynh, D.C.</SectionTitle>
       </motion.div>
       <div className="flex md:flex-row flex-col gap-8">
-        <div className="flex-1 p-4">
+        <div className="basis-1/2 p-4">
           {aboutData.map((dataItem) => {
             return <p key={dataItem.id}>{dataItem.text}</p>
           })}
         </div>
-        <div className="flex-1">
+        <div className="basis-1/2">
           <img
             src={headshot}
             className="h-full max-h-96 w-full object-contain object-center"
