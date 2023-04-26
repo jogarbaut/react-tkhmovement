@@ -20,13 +20,13 @@ const Slider = ({ data }) => {
   return (
     <div className="w-full h-full rounded-xl bg-center bg-cover relative">
       <div
-        className="absolute top-1/2 text-2xl left-4 rounded p-2 bg-primary-500/50 hover:bg-primary-500 text-white cursor-pointer hover:duration-300 duartion-300"
+        className="absolute top-1/2 text-2xl left-2 rounded p-2 bg-primary-500/50 hover:bg-primary-500 text-white cursor-pointer hover:duration-300 duartion-300"
         onClick={handlePreviousArrowClick}
       >
         <GoChevronLeft />
       </div>
       <div
-        className="absolute top-1/2 right-4 text-2xl rounded p-2 bg-primary-500/50 hover:bg-primary-500 text-white cursor-pointer hover:duration-300 duration-300"
+        className="absolute top-1/2 right-2 text-2xl rounded p-2 bg-primary-500/50 hover:bg-primary-500 text-white cursor-pointer hover:duration-300 duration-300"
         onClick={handleNextArrowClick}
       >
         <GoChevronRight />

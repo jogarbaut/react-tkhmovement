@@ -7,7 +7,7 @@ import NavButton from "./NavButton"
 import { FaInstagram, FaYelp, FaGoogle } from "react-icons/fa"
 
 const Navbar = ({ selectedPage, setSelectedPage }) => {
-  const [isUserTopOfPage, setIsUserTopOfPage] = useState(false)
+  const [isUserTopOfPage, setIsUserTopOfPage] = useState(true)
 
   const isLargeScreenAndAbove = useMediaQuery("(min-width:1025px)")
 
@@ -21,6 +21,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsUserTopOfPage(true)
+        setSelectedPage('home')
       } else {
         setIsUserTopOfPage(false)
       }
@@ -28,7 +29,7 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [setSelectedPage])
 
   const renderedFullNavbar = (
     <>

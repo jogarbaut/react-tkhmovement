@@ -36,7 +36,7 @@ const AboutPage = ({setSelectedPage}) => {
       <div className="flex flex-col md:flex-row gap-8">
         {data.map((dataCategory) => {
           return (
-            <div className="flex flex-col mx-auto">
+            <div className="flex flex-col items-start md:mx-auto ml-8 md:ml-0">
               {dataCategory.map((dataItem) => {
                 return (
                   <Bullet

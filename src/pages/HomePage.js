@@ -1,10 +1,19 @@
 import { motion } from "framer-motion"
 import Button from "../components/Button"
+import introVideo from "../assets/introVideo.mp4"
 
 const HomePage = ({ setSelectedPage }) => {
   return (
-    <section id="home" className="w-full h-screen bg-red-300">
-      <div className="bg-slate-200/70 w-full h-full flex justify-start items-center pl-[10%]">
+    <section id="home" className="w-full h-screen relative">
+      <video
+        src={introVideo}
+        playsInline
+        autoPlay
+        muted
+        loop
+        className="w-full h-full object-cover object-center"
+      />
+      <div className="bg-slate-900/20 w-full h-full flex absolute justify-start items-center px-[10%] inset-0">
         <motion.div onViewportEnter={() => setSelectedPage("home")}>
           <div className="flex flex-col gap-4">
             <div className="text-3xl text-white">Learn the Tools</div>

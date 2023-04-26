@@ -15,11 +15,11 @@ const App = () => {
     <div className="w-full">
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
       <HomePage setSelectedPage={setSelectedPage} />
-      <div className="w-full max-w-5xl mx-auto">
+      <div className="w-full max-w-5xl mx-auto px-4">
         <AboutPage setSelectedPage={setSelectedPage} />
         <ClinicInformationPage setSelectedPage={setSelectedPage} />
         <SchedulerPage setSelectedPage={setSelectedPage} />
-        {/* <VideosPage /> */}
+        <VideosPage setSelectedPage={setSelectedPage} />
         <TestimonialsPage setSelectedPage={setSelectedPage} />
       </div>
       <Footer />

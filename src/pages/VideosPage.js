@@ -10,7 +10,7 @@ const VideosPage = ({ setSelectedPage }) => {
         <SectionTitle>Videos</SectionTitle>
       </motion.div>
 
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-col md:flex-row gap-4">
         {videoData.map((dataItem) => {
           return <VideoBox video={dataItem} key={dataItem.id} />
         })}
