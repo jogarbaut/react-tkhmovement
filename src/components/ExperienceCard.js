@@ -1,3 +1,5 @@
+import { memo } from "react"
+
 const ExperienceCard = ({ experience }) => {
   return (
     <article className="about-card experience">
@@ -8,4 +10,4 @@ const ExperienceCard = ({ experience }) => {
   )
 }
 
-export default ExperienceCard
+export default memo(ExperienceCard)

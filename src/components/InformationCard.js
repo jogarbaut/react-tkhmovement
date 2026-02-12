@@ -1,3 +1,5 @@
+import { memo } from "react"
+
 const InformationCard = ({ information }) => {
   return (
     <article className="information">
@@ -13,4 +15,4 @@ const InformationCard = ({ information }) => {
   )
 }
 
-export default InformationCard
+export default memo(InformationCard)

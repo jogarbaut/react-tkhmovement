@@ -1,3 +1,5 @@
+import { memo } from "react"
+
 const VideoCard = ({ video }) => {
   return (
     <article className="video">
@@ -14,4 +16,4 @@ const VideoCard = ({ video }) => {
   )
 }
 
-export default VideoCard
+export default memo(VideoCard)

@@ -1,4 +1,4 @@
-import React from 'react'
+import { memo } from 'react'
 
 const EducationCard = ({ education }) => {
   return (
@@ -11,4 +11,4 @@ const EducationCard = ({ education }) => {
   )
 }
 
-export default EducationCard
+export default memo(EducationCard)

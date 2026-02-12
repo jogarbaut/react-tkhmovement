@@ -1,4 +1,4 @@
-import React from "react"
+import { memo } from "react"
 
 const ServiceCardLarge = ({ service }) => {
   return (
@@ -14,4 +14,4 @@ const ServiceCardLarge = ({ service }) => {
   )
 }
 
-export default ServiceCardLarge
+export default memo(ServiceCardLarge)

@@ -1,4 +1,4 @@
-import React from 'react'
+import { memo } from 'react'
 
 const ServiceCardSmall = ({ service }) => {
   return (
@@ -7,11 +7,11 @@ const ServiceCardSmall = ({ service }) => {
       <small className="text-brand">{service.subtitle}</small>
       <p>{service.description_1}</p>
       <p>{service.description_2}</p>
-      <a href={service.link} className="custom-link" target="_blank" rel="noopener noreferrer"> 
+      <a href={service.link} className="custom-link" target="_blank" rel="noopener noreferrer">
         Schedule<span>&rarr;</span>
       </a>
     </article>
   )
 }
 
-export default ServiceCardSmall
+export default memo(ServiceCardSmall)

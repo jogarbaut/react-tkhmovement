@@ -4,8 +4,12 @@ import Navbar from "react-bootstrap/Navbar"
 import sbrpLogo from "../assets/img/south-bay-rehab-performance-logo.png"
 import { FaGoogle, FaInstagram, FaYelp } from "react-icons/fa"
 import { SOCIAL_MEDIA, NAV_SECTIONS } from "../constants"
+import useScrollSpy from "../hooks/useScrollSpy"
 
 const CustomNav = () => {
+  const sectionIds = NAV_SECTIONS.map((section) => section.id)
+  const activeSection = useScrollSpy(sectionIds)
+
   return (
     <Navbar expand="lg" id="navbar" fixed="top">
       <Container className="navbar-container justify-content-between align-items-center">
@@ -16,7 +20,11 @@ const CustomNav = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
             {NAV_SECTIONS.map((section) => (
-              <Nav.Link key={section.id} href={`#${section.id}`}>
+              <Nav.Link
+                key={section.id}
+                href={`#${section.id}`}
+                className={activeSection === section.id ? "active" : ""}
+              >
                 {section.label}
               </Nav.Link>
             ))}

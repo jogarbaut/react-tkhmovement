@@ -1,10 +1,16 @@
+import { useRef } from "react"
 import sbrpIntroVideo from "../assets/video/sbrp-clinic-showcase.mp4"
 import { BOOKING_URLS } from "../constants"
+import useVideoAutoplay from "../hooks/useVideoAutoplay"
 
 const Showcase = () => {
+  const videoRef = useRef(null)
+  useVideoAutoplay(videoRef, { threshold: 0.3 })
+
   return (
     <section id="home" className="showcase d-flex align-items-center">
       <video
+        ref={videoRef}
         src={sbrpIntroVideo}
         playsInline
         autoPlay
