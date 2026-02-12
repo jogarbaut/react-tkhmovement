@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/react-tkhmovement/static/css/main.8bb7bc32.css",
+    "main.js": "/react-tkhmovement/static/js/main.36506cef.js",
+    "static/media/sbrp-clinic-showcase.mp4": "/react-tkhmovement/static/media/sbrp-clinic-showcase.58f09e08b44f59ad770b.mp4",
+    "static/media/headshot-doctor-white-bg.png": "/react-tkhmovement/static/media/headshot-doctor-white-bg.d883f8f4e46187791868.png",
+    "static/media/south-bay-rehab-performance-logo.png": "/react-tkhmovement/static/media/south-bay-rehab-performance-logo.8ad9b623bb3f32ee4484.png",
+    "index.html": "/react-tkhmovement/index.html",
+    "static/media/location-outline.svg": "/react-tkhmovement/static/media/location-outline.13e7074af7d5c980dc9c.svg",
+    "static/media/phone-portrait-outline.svg": "/react-tkhmovement/static/media/phone-portrait-outline.4201f7b0deae3c158886.svg",
+    "static/media/time-outline.svg": "/react-tkhmovement/static/media/time-outline.77867625ec9647a612df.svg",
+    "main.8bb7bc32.css.map": "/react-tkhmovement/static/css/main.8bb7bc32.css.map",
+    "main.36506cef.js.map": "/react-tkhmovement/static/js/main.36506cef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8bb7bc32.css",
+    "static/js/main.36506cef.js"
+  ]
+}
