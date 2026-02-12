@@ -4,7 +4,7 @@ A modern, responsive single-page application built for a local chiropractic clin
 
 ## Live Demo
 
-**[View Live Site](https://jomelbautista.github.io/react-tkhmovement/)**
+**[View Live Site](https://jogarbaut.github.io/react-tkhmovement/)**
 
 ## Features
 
@@ -19,11 +19,13 @@ A modern, responsive single-page application built for a local chiropractic clin
 ## Tech Stack
 
 **Core:**
+
 - React 18.2
 - React Bootstrap 5.2
 - React Icons
 
 **Key Patterns & Concepts:**
+
 - Custom Hooks (useScrollSpy, useMediaQuery, useVideoAutoplay, useOnScreen)
 - React.memo for performance optimization
 - IntersectionObserver API
@@ -45,23 +47,27 @@ src/
 ## Development Setup
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - npm
 
 ### Installation
 
 1. Clone the repository
+
 ```bash
-git clone https://github.com/jomelbautista/react-tkhmovement.git
+git clone https://github.com/jogarbaut/react-tkhmovement.git
 cd react-tkhmovement
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 3. Start the development server
+
 ```bash
 npm start
 ```
@@ -78,12 +84,14 @@ The app will open at [http://localhost:3000](http://localhost:3000)
 ## Key Technical Implementations
 
 ### Custom Hooks
+
 - **useScrollSpy** - Tracks which section is currently in viewport for active nav highlighting
 - **useVideoAutoplay** - Manages video play/pause based on visibility
 - **useMediaQuery** - Responsive behavior based on screen size
 - **useOnScreen** - IntersectionObserver wrapper for visibility detection
 
 ### Performance Optimizations
+
 - Memoized pure components (service cards, video cards, education cards)
 - Lazy loading of images and videos
 - Efficient re-render prevention with React.memo
@@ -105,7 +113,8 @@ npm run deploy
 ## Contact
 
 **Jomel Bautista**
-- GitHub: [@jomelbautista](https://github.com/jomelbautista)
+
+- GitHub: [@jogarbaut](https://github.com/jogarbaut)
 
 ## License
 
