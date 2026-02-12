@@ -1,3 +1,5 @@
+import { YOUTUBE_VIDEOS } from "../constants"
+
 const videoDataArray = [
   {
     id: 1,
@@ -5,7 +7,7 @@ const videoDataArray = [
     subtitle: "Video",
     description_1: "Here is what your visit to the clinic may look like.",
     description_2: "",
-    link: "https://www.youtube.com/embed/XuJrAW6WviA"
+    link: YOUTUBE_VIDEOS.VIDEO_1
   },
   {
     id: 2,
@@ -13,7 +15,7 @@ const videoDataArray = [
     subtitle: "Video",
     description_1: "This is an example of a patient's mobility before treatment.",
     description_2: "",
-    link: "https://www.youtube.com/embed/8HtLzUKauc4"
+    link: YOUTUBE_VIDEOS.VIDEO_2
   },
   {
     id: 3,
@@ -21,7 +23,7 @@ const videoDataArray = [
     subtitle: "Video",
     description_1: "After a few visits, this was the patients improved mobility.",
     description_2: "",
-    link: "https://www.youtube.com/embed/xYx4YhXftmE"
+    link: YOUTUBE_VIDEOS.VIDEO_3
   }
 ]
 

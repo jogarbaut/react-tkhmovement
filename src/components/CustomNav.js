@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import sbrpLogo from "../assets/img/south-bay-rehab-performance-logo.png"
 import { FaGoogle, FaInstagram, FaYelp } from "react-icons/fa"
+import { SOCIAL_MEDIA, NAV_SECTIONS } from "../constants"
 
 const CustomNav = () => {
   return (
@@ -14,29 +15,26 @@ const CustomNav = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
-            {/* <Scrollspy items={ ['home', 'about', 'clinic-information', 'services-scheduler', 'videos', 'testimonials']} currentClassName="active"> */}
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#clinic-information">Clinic Information</Nav.Link>
-            <Nav.Link href="#services-scheduler">Services & Scheduler</Nav.Link>
-            <Nav.Link href="#videos">Videos</Nav.Link>
-            <Nav.Link href="#testimonials">Testimonials</Nav.Link>
-            {/* </Scrollspy> */}
+            {NAV_SECTIONS.map((section) => (
+              <Nav.Link key={section.id} href={`#${section.id}`}>
+                {section.label}
+              </Nav.Link>
+            ))}
           </Nav>
           <Nav className="ms-auto">
-          <ul className="d-flex my-auto">
+            <ul className="d-flex my-auto">
               <li className="nav-item">
-                <a className="social-icon" href="https://www.instagram.com/dr.takhuynh.dc/" target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href={SOCIAL_MEDIA.INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <FaInstagram />
                 </a>
               </li>
               <li className="nav-item">
-                <a className="social-icon" href="https://www.yelp.com/biz/south-bay-rehab-and-performance-cupertino-5" target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href={SOCIAL_MEDIA.YELP} target="_blank" rel="noopener noreferrer" aria-label="Yelp">
                   <FaYelp />
                 </a>
               </li>
               <li className="nav-item">
-                <a className="social-icon" href="https://www.google.com/search?hl=en-US&gl=us&q=South+Bay+Rehab+and+Performance,+21629+Stevens+Creek+Blvd,+Cupertino,+CA+95014&ludocid=2591568071588085950&lsig=AB86z5V4qEBt6z_a03fT7OKh5Ryw#lrd=0x808fb58e41eadc7b:0x23f7196e2e4080be,1" target="_blank" rel="noopener noreferrer">
+                <a className="social-icon" href={SOCIAL_MEDIA.GOOGLE} target="_blank" rel="noopener noreferrer" aria-label="Google Reviews">
                   <FaGoogle />
                 </a>
               </li>
